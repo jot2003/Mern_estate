@@ -14,7 +14,11 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
+    },
+    avatar:{
+        type: String,
+        default: "https://militaryhealthinstitute.org/wp-content/uploads/sites/37/2021/08/blank-profile-picture-png.png"
+    },
 }, {timestamps: true});
 
 const User = mongoose.model('User', userSchema);
